@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<magentogarden translate="label" module="seosuite">
+			<label>MagentoGarden</label>
+			<sort_order>99</sort_order>
+		</magentogarden>
+	</tabs>
+	<sections>
+		<magentogarden_seosuite translate="label" module="seosuite">
+			<label>SEO Extension</label>
+			<tab>magentogarden</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>10</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<general translate="label">
+					<label>General</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled_seosuite>
+							<label>Enable SEO Extension</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enabled_seosuite>
+						<enabled_image_sitemap>
+							<label>Enable Images in sitemap</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enabled_image_sitemap>
+						<include_all_gallery>
+							<label>Include all gallery images in Sitemap</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</include_all_gallery>
+						<enabled_split_sitemap>
+							<label>Enable Split Sitemap automatically</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enabled_split_sitemap>
+						<enabled_blog_sitemap>
+							<label>Enable Sitemap for Blog Extension</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enabled_blog_sitemap>
+						<include_customurl>
+							<label>Include Custom Url in the Sitemap</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</include_customurl>
+						<enabled_pagination translate="label">
+                            <label>Use rel="next" and rel="prev" with paginated pages</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled_pagination>
+					</fields>
+				</general>
+				<canonical translate="label">
+					<label>Canonical Link Meta Tag</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>14</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enable>
+							<label>Enable for Product</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Please confirm to disable the default "Catalog" -> "Search Engine Optimization" -> "Use Canonical Link Meta Tag For Products"</comment>
+						</enable>
+                        <hreflang>
+                        	<label>Include HREFLANG in head</label>
+                        	<frontend_type>select</frontend_type>
+                        	<source_model>adminhtml/system_config_source_yesno</source_model>
+                        	<sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </hreflang>
+                        <style>
+                        	<label>Product Canoncial Link Meta Tag Style</label>
+                        	<frontend_type>select</frontend_type>
+                        	<source_model>seosuite/system_config_source_canonical</source_model>
+                        	<sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </style>
+					</fields>
+				</canonical>
+				<friendly_url translate="label">
+					<label>Friendly URL</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>15</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<review_router>
+							<label>Route to Review</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>21</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</review_router>
+						<review_router>
+							<label>Route to RSS</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>22</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</review_router>
+					</fields>
+				</friendly_url>
+				<user_sitemap translate="label">
+					<label>User Sitemap</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>20</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<seosuite_user_sitemap_title>
+							<label>The title for User Sitemap</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>21</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</seosuite_user_sitemap_title>
+						<!--<seosuite_user_sitemap_style>
+							<label>Show Style</label>
+							<frontend_type>select</frontend_type>
+							<source_model>seosuite/system_config_source_showStyle</source_model>
+							<sort_order>22</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</seosuite_user_sitemap_style>
+						<seosuite_user_sitemap_balance>
+							<label>Balanced the block</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>23</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Only when you select the Block Mode.</comment>
+						</seosuite_user_sitemap_balance>-->
+					</fields>
+				</user_sitemap>
+				<open_graph>
+					<label>Open Graph</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>30</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<open_graph_product>
+							<label>Enable Open Graph for Product Page</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Once enabled, og metadata will add to head</comment>
+						</open_graph_product>
+					</fields>
+				</open_graph>
+				<analytic>
+					<label>Analytic</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>40</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<content_class>
+							<label>Page Content Div Class</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>This is essential when using Analytic function. If full page content will be used, please leave this option empty. Separate with comma if multiple selector.</comment>
+						</content_class>
+					</fields>
+				</analytic>
+			</groups>
+		</magentogarden_seosuite>
+	</sections>
+</config>

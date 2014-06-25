@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MagentoGarden_Seosuite>
+            <active>true</active>
+            <codePool>local</codePool>
+        </MagentoGarden_Seosuite>
+    </modules>
+</config> 

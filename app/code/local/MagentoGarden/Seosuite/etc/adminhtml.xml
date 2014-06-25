@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<config>
+	<menu>
+		<magentogarden>
+			<title>MagentoGarden</title>
+			<sort_order>200</sort_order>
+			<children>
+				<seosuite translate="title" module="seosuite">
+					<title>Seo Extension</title>
+					<sort_order>25</sort_order>
+					<children>
+						<imagesitemap translate="title" module="seosuite">
+							<title>Manage Image Sitemap</title>
+							<action>adminhtml/imagesitemap/index</action>
+							<sort_order>10</sort_order>
+						</imagesitemap>
+						<customurl translate="title" module="seosuite">
+							<title>Manage Custom URL</title>
+							<action>adminhtml/customurl/index</action>
+							<sort_order>20</sort_order>
+						</customurl>
+						<pageanalytic translate="title" module="seosuite">
+							<title>Page Analytic</title>
+							<action>adminhtml/mganalytic/page</action>
+							<sort_order>30</sort_order>
+						</pageanalytic>
+						<generate translate="title" module="seosuite">
+							<title>Generate all sitemaps</title>
+							<action>adminhtml/seo/generate</action>
+							<sort_order>40</sort_order>
+						</generate>
+					</children>
+				</seosuite>
+			</children>
+		</magentogarden>
+	</menu>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<magentogarden_seosuite translate="title" module="seosuite">
+									<title>Config MagentoGarden SEO Suite</title>
+									<sort_order>50</sort_order>
+									</magentogarden_seosuite>
+								</children>
+							</config>
+						</children>
+					</system>
+					<magentogarden translate="title" module="seosuite">
+						<title>MagentoGarden</title>
+						<sort_order>100</sort_order>
+						<children>
+							<seosuite translate="title">
+								<title>MagentoGarden SEO Suite</title>
+								<sort_order>0</sort_order>
+								<children>
+									<imagesitemap translate="title" module="seosuite">
+										<title>Manage Image Sitemap</title>
+										<sort_order>10</sort_order>
+									</imagesitemap>
+									<customurl translate="title" module="seosuite">
+										<title>Manage Custom Url</title>
+										<sort_order>20</sort_order>
+									</customurl>
+									<pageanalytic translate="title" module="seosuite">
+										<title>Page Analytic</title>
+										<sort_order>30</sort_order>
+									</pageanalytic>
+									<generate translate="title" module="seosuite">
+										<title>Generate all sitemaps</title>
+										<sort_order>40</sort_order>
+									</generate>
+								</children>
+							</seosuite>
+						</children>
+					</magentogarden>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

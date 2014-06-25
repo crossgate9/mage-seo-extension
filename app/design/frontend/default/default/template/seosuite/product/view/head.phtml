@@ -1,0 +1,9 @@
+<?php if (Mage::helper('seosuite')->isProductOpenGraphEnabled()): ?>
+<meta property="og:title" content='<?php echo $this->getProductTitle();?>'>
+<meta property="og:type" content='product'>
+<meta property="og:url" content='<?php echo $this->getProductUrl();?>'>
+<?php $_image = $this->getProductImage();?>
+<?php if ($_image !== false): ?>
+<meta property="og:image" content='<?php echo $_image; ?>'>
+<?php endif; ?>
+<?php endif; ?>

@@ -1,0 +1,41 @@
+<?php $_product_info = $this->getProductInfo(); ?>
+
+<div class="mg-preview">
+	<img width="200px" height="200px"/>
+	<div class="description">
+		<?php if ($_product_info != NULL): ?>
+		<?php echo $_product_info['description']; ?>
+		<?php endif; ?>
+	</div>
+</div>
+<div class="mg-notice">
+	<p><?php echo $this->__('Not found you image? Click "Back" to check whether it already has Image Sitemap.');?></p>
+</div>
+
+<style>
+	.mg-notice { font-weight: bold; padding: 5px; border: 1px solid #ddd; clear: both; }
+	.mg-preview * { float: left; }
+	.mg-preview .description { padding-left: 10px; width: 500px; }
+</style>
+<script type="text/javascript">
+	jQuery(function() {
+		jQuery('#value_id').change(function() {
+			var text = jQuery(this).find('option:selected').text().split('#');
+			var value_id = jQuery(this).val();
+			var url = text[1];
+			jQuery('.mg-preview img').attr('src', url);
+			
+			var getinfoUrl = '<?php echo $this->getInfoUrl(); ?>';
+			jQuery.ajax({
+				url : getinfoUrl, 
+				data : {
+					value_id: value_id
+				}
+			}).success(function(response) {
+				response = jQuery.parseJSON(response);
+				jQuery('.mg-preview .description').html(response.description);
+			});
+		});
+		jQuery('#value_id').change();
+	});
+</script>

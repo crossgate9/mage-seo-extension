@@ -1,0 +1,8 @@
+<?php $_stores = $this->get_stores(); ?>
+<?php foreach ($_stores as $_store): ?>
+
+<link rel="alternate" 
+      hreflang="<?php echo str_replace('_', '-', $_store->getConfig('general/locale/code'));?>" 
+      href="<?php echo $_store->getCurrentUrl(); ?>">
+
+<?php endforeach; ?>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<adminhtml_imagesitemap_grid>
+		<reference name="head">
+			<action method="addJs"><script>magentogarden/jquery-1.6.4.min.js</script></action>
+			<action method="addJs"><script>magentogarden/global.js</script></action>
+			<action method="addJs"><script>magentogarden/ajaxupload.3.5.js</script></action>
+		</reference>
+	</adminhtml_imagesitemap_grid>
+	
+	<adminhtml_imagesitemap_edit>
+    	<reference name="head">
+			<action method="addJs"><script>magentogarden/jquery-1.6.4.min.js</script></action>
+			<action method="addJs"><script>magentogarden/global.js</script></action>
+			<action method="addJs"><script>magentogarden/ajaxupload.3.5.js</script></action>
+		</reference>
+		<reference name="content">
+    		<block type="seosuite/adminhtml_imagesitemap_edit" name="seosuite_imagesitemap_edit"></block>
+    		<block type="seosuite/adminhtml_imagesitemap_edit_js" name="seosuite_imagesite_edit_js" template="seosuite/imagesitemap/edit.phtml"></block>
+    	</reference>
+    </adminhtml_imagesitemap_edit>
+    
+    <adminhtml_customurl_grid>
+    	<reference name="head">
+			<action method="addJs"><script>magentogarden/jquery-1.6.4.min.js</script></action>
+			<action method="addJs"><script>magentogarden/global.js</script></action>
+			<action method="addJs"><script>magentogarden/ajaxupload.3.5.js</script></action>
+		</reference>
+    </adminhtml_customurl_grid>
+    
+    <adminhtml_customurl_edit>
+    	<reference name="head">
+			<action method="addJs"><script>magentogarden/jquery-1.6.4.min.js</script></action>
+			<action method="addJs"><script>magentogarden/global.js</script></action>
+			<action method="addJs"><script>magentogarden/ajaxupload.3.5.js</script></action>
+		</reference>
+		<reference name="content">
+    		<block type="seosuite/adminhtml_customurl_edit" name="seosuite_customurl_edit"></block>
+    	</reference>
+    </adminhtml_customurl_edit>
+    
+    <adminhtml_mganalytic_page>
+    	<reference name="head">
+    		<!--<action method="addJs"><file>mage/adminhtml/product/composite/configure.js</file></action>
+            <action method="addJs"><file>varien/configurable.js</file></action>-->
+			<action method="addJs"><script>magentogarden/jquery-1.6.4.min.js</script></action>
+			<action method="addJs"><script>magentogarden/global.js</script></action>
+			<action method="addJs"><script>magentogarden/ajaxupload.3.5.js</script></action>
+		</reference>
+		<reference name="left">
+			<block type="adminhtml/store_switcher" name="store_switcher" before="-"></block>
+			<block type="seosuite/adminhtml_analytic_edit_tabs" name="seosuite_analytic_tabs">
+				<block type="seosuite/adminhtml_analytic_edit_tab_products" name="seosuite_analytic_page_products" template="seosuite/analytic/page/products.phtml"></block>
+				<block type="seosuite/adminhtml_analytic_edit_tab_blogs" name="seosuite_analytic_page_blogs" template="seosuite/analytic/page/blogs.phtml"></block>
+				<action method="addTab"><name>seosuite_analytic_page_products</name><block>seosuite_analytic_page_products</block></action>
+				<action method="addTab"><name>seosuite_analytic_page_blogs</name><block>seosuite_analytic_page_blogs</block></action>
+			</block>
+		</reference>
+		<reference name="content">
+			<block type="seosuite/adminhtml_analytic_page" name="seosuite_analytic_page"></block>
+		</reference>
+    </adminhtml_mganalytic_page>
+    
+</layout>

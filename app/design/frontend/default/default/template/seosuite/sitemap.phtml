@@ -1,0 +1,44 @@
+<style>
+	.level-cat { padding-left: 20px; }
+	.level-cat-1 { font-size: 20px; }
+	.level-cat-2 { font-size: 18px; }
+	.level-cat-3 { font-size: 16px; }
+	.product-li, .blog-li, .cms-li { font-size: 14px; padding-left: 20px; }
+</style>
+
+<h1><?php echo Mage::helper('seosuite')->getUserSitemapTitle(); ?></h1>
+
+<?php if ($this->isTreeStyle()): ?>
+
+<?php $_sitemaps = $this->getSitemaps();?>
+<?php $_categories = $_sitemaps['category']; ?>
+<?php $_blogs = $_sitemaps['blog']; ?>
+<?php $_cms = $_sitemaps['cms']; ?>
+
+<h2>Categories and Products</h2>
+<?php // Categries and Productes ?>
+<?php echo $this->printTree($_categories); ?>
+
+<?php // Blog ?>
+<?php if ($_blogs != NULL): ?>
+	<h2>Blog</h2>
+	<ul>
+	<?php foreach ($_blogs as $_item): ?>
+		<li class="blog-li"><a href="<?php echo $_item['url']?>" title="<?php $_item['name'];?>"><?php echo $_item['name'];?></a></li>
+	<?php endforeach; ?>
+	</ul>
+<?php endif; ?>
+
+<?php // Cms ?>
+<?php if ($_cms != NULL): ?>
+	<h2>Info</h2>
+	<ul>
+	<?php foreach ($_cms as $_item): ?>
+		<li class="cms-li"><a href="<?php echo $_item['url']?>" title="<?php echo $_item['name']?>"><?php echo $_item['name']?></a></li>
+	<?php endforeach; ?>
+	</ul>
+<?php endif;?>
+	
+<?php else: ?>
+	
+<?php endif;?>

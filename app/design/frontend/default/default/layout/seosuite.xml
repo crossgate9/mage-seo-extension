@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <block type="seosuite/page_head" name="seosuite.page.head" template="seosuite/page/head.phtml"></block>
+        </reference>
+    </default>
+
+    <catalog_product_view>
+    	<reference name="head">
+    		<block type="seosuite/opengraph" name="seosuite.og" template="seosuite/product/view/head.phtml"></block>
+    	</reference>
+    </catalog_product_view>
+    
+    <blog_post_view>
+    	<reference name="head">
+    		<block type="seosuite/opengraph" name="seosuote.og" template="seosuite/opengraph/blog/head.phtml" ></block>
+    	</reference>
+    </blog_post_view>
+    
+    <seosuite_index_index>
+    	<reference name="root">
+    		<action method="setTemplate"><template>page/1column.phtml</template></action>
+    	</reference>
+        <reference name="content">
+            <block type="seosuite/sitemap" name="seosuite" template="seosuite/sitemap.phtml" />
+        </reference>
+    </seosuite_index_index>
+</layout> 
